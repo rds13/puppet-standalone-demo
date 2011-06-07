@@ -7,3 +7,6 @@
 [submodule "puppet/modules/sysstat"]
 	path = puppet/modules/sysstat
 	url = git@github.com:aussielunix/puppet-sysstat.git
+[submodule "puppet/modules/sudo"]
+	path = puppet/modules/sudo
+	url = git@github.com:aussielunix/puppet-sudo.git
