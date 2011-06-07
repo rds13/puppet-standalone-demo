@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : roles.pp
 # @created : Tue, 23 Nov 2010 22:25:47 +1100
-# @last changed: Sun 30 Jan 2011 19:47:37 EST
+# @last changed: Tue 07 Jun 2011 21:36:17 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 # define the inheritance heirarchy for different
@@ -10,6 +10,9 @@
 # class common to all servers
 #
 class standardbuild {
+}
+
+class standardbuild2 {
   include motd
   include root_mail
   include sudo
@@ -20,14 +23,4 @@ class standardbuild {
 
   realize(Group['devop'])
   realize(Ssh_user['lunix'])  
-}
-
-class web inherits standardbuild {
-
-  include apache2::common
-  include apache2::php5
-
-  realize(Group['deploy'])
-  realize(Ssh_user['deploy'])
-
 }
