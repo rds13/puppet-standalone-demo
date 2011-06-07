@@ -1,7 +1,6 @@
 # puppet-standalone-demo
 
-** Currently being refactored for puppet 2.6 **
-** so the Capistrano script WILL FAIL ! **
+** Currently being refactored for puppet 2.6 so the Capistrano script WILL FAIL ! **
 
 ## In here you will find:
 
@@ -14,13 +13,13 @@
 * takes a fresh deployed Ubuntu Lucid instance to a working bare linux server.
 
 
-    git clone git://github.com/aussielunix/puppet-standalone-demo.git
-    cd puppet-standalone-demo
-    git submodule init
-    git submodule update
-    vagrant up
-    vagrant ssh
-    puppet apply --verbose /opt/puppet/init.pp --modulepath=/opt/puppet/modules/
+    git clone git://github.com/aussielunix/puppet-standalone-demo.git  
+    cd puppet-standalone-demo  
+    git submodule init  
+    git submodule update  
+    vagrant up  
+    vagrant ssh  
+    puppet apply --verbose /opt/puppet/init.pp --modulepath=/opt/puppet/modules/  
 
 ### TODO
 
