@@ -1,22 +1,30 @@
-## puppet-standalone-demo
+# puppet-standalone-demo
 
-**NOT COMPLETE YET**
+** Currently being refactored for puppet 2.6 **
+** so the Capistrano script WILL FAIL ! **
 
-In here you will find a basic collection of puppet manifests and modules and a capistrano recipe.  
+## In here you will find:
 
-With this I am able to take a fresh Linode/Slice and have it running my website in 5 minutes.  
+* a capistrano script - for orchestration - BORKED
+* a Vagrantfile - for tesing/developing this repos - [Vagrant](http://vagrantup.com/)
+* a basic collection of puppet manifests and modules
+
+## What this does right now
+
+* takes a fresh deployed Ubuntu Lucid instance to a working bare linux server.
 
 
     git clone git://github.com/aussielunix/puppet-standalone-demo.git
     cd puppet-standalone-demo
-    gem install capistrano
-    cap puppet:prep HOST="173.255.200.9"
-    cap puppet:go HOST="173.255.200.9" OPTIONS="--noop"
-    cap puppet:go HOST="173.255.200.9"
-    cap deploy HOST="173.255.200.9" (you'll be asked for the domain of the vhost)
-
+    git submodule init
+    git submodule update
+    vagrant up
+    vagrant ssh
+    puppet apply --verbose /opt/puppet/init.pp --modulepath=/opt/puppet/modules/
 
 ### TODO
 
-* Add some cucumber-nagios tests to confirm puppet has deployed correctly
-* add some roles to puppet, eg: base server, drupal, mercury, mediawiki etc
+
+* Fix cap script to be puppet 2.6 ready
+* new puppet role for LAMP
+* document modifying the puppet modules in the github wiki
