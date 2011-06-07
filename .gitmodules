@@ -1,3 +1,6 @@
 [submodule "puppet/modules/user"]
 	path = puppet/modules/user
 	url = git@github.com:aussielunix/puppet-user.git
+[submodule "puppet/modules/ssh"]
+	path = puppet/modules/ssh
+	url = git@github.com:aussielunix/puppet-ssh.git
