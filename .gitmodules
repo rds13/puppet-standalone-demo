@@ -4,3 +4,6 @@
 [submodule "puppet/modules/ssh"]
 	path = puppet/modules/ssh
 	url = git@github.com:aussielunix/puppet-ssh.git
+[submodule "puppet/modules/sysstat"]
+	path = puppet/modules/sysstat
+	url = git@github.com:aussielunix/puppet-sysstat.git
