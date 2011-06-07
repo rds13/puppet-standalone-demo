@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : roles.pp
 # @created : Tue, 23 Nov 2010 22:25:47 +1100
-# @last changed: Tue 07 Jun 2011 21:36:17 EST
+# @last changed: Tue 07 Jun 2011 21:51:36 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 # define the inheritance heirarchy for different
@@ -10,17 +10,12 @@
 # class common to all servers
 #
 class standardbuild {
-}
-
-class standardbuild2 {
   include motd
-  include root_mail
   include sudo
-  include ssh
-  include sysstat
+  class { 'ssh': }
+  class { 'sysstat': sardays => '30' }
   include git
-  include postfix
-
-  realize(Group['devop'])
-  realize(Ssh_user['lunix'])  
+  include user
+  include augeas
 }
+
