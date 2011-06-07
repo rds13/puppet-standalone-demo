@@ -10,3 +10,6 @@
 [submodule "puppet/modules/sudo"]
 	path = puppet/modules/sudo
 	url = git@github.com:aussielunix/puppet-sudo.git
+[submodule "puppet/modules/motd"]
+	path = puppet/modules/motd
+	url = git@github.com:aussielunix/puppet-motd.git
