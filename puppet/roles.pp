@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : roles.pp
 # @created : Tue, 23 Nov 2010 22:25:47 +1100
-# @last changed: Tue 07 Jun 2011 21:51:36 EST
+# @last changed: Sat 11 Jun 2011 17:01:35 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 # define the inheritance heirarchy for different
@@ -12,7 +12,7 @@
 class standardbuild {
   include motd
   include sudo
-  class { 'ssh': }
+  class { 'ssh': permitrootlogin => 'without-password' }
   class { 'sysstat': sardays => '30' }
   include git
   include user
