@@ -19,7 +19,7 @@ namespace :puppet do
   task :prep, :hosts => host do
     options = ENV['options'] || ENV['OPTIONS']
     run "apt-get install -q -y ruby rubygems libshadow-ruby1.8 git-core libruby-extras"
-    run "gem install puppet"
+    run "gem install puppet --no-rdoc --no-ri "
     run "git clone git://github.com/aussielunix/puppet-standalone-demo.git /opt/"
     run "cd /opt/ && git submodule init && git submodule update"
   end
