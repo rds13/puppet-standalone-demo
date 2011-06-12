@@ -13,7 +13,7 @@
 
     git clone git://github.com/aussielunix/puppet-standalone-demo.git  
     cd puppet-standalone-demo  
-    ssh-copy-id -i ~/.ssh/user_dsa.pub root@173.255.200.9
+    ssh-copy-id -i ~/.ssh/user_dsa.pub root@173.255.200.9  
     cap puppet:prep HOST="173.255.200.9"  
     cap puppet:go HOST="173.255.200.9" OPTIONS="--noop"  
     cap puppet:go HOST="173.255.200.9"  
