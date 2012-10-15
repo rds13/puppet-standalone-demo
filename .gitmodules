@@ -1,21 +1,12 @@
 [submodule "puppet/modules/user"]
     path = puppet/modules/user
-      url = git://github.com/aussielunix/puppet-user.git
+      url = git://github.com/rds13/puppet-user.git
 [submodule "puppet/modules/ssh"]
     path = puppet/modules/ssh
-      url = git://github.com/aussielunix/puppet-ssh.git
+      url = git://github.com/rds13/puppet-ssh.git
 [submodule "puppet/modules/sysstat"]
     path = puppet/modules/sysstat
-      url = git://github.com/aussielunix/puppet-sysstat.git
-[submodule "puppet/modules/sudo"]
-    path = puppet/modules/sudo
-      url = git://github.com/aussielunix/puppet-sudo.git
+      url = git://github.com/rds13/puppet-sysstat.git
 [submodule "puppet/modules/motd"]
     path = puppet/modules/motd
-      url = git://github.com/aussielunix/puppet-motd.git
-[submodule "puppet/modules/git"]
-    path = puppet/modules/git
-      url = git://github.com/aussielunix/puppet-git.git
-[submodule "puppet/modules/augeas"]
-    path = puppet/modules/augeas
-      url = git://github.com/aussielunix/puppet-augeas.git
+      url = git://github.com/rds13/puppet-motd.git
