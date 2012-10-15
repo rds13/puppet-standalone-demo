@@ -13,6 +13,7 @@ def prompt_with_default(var, default)
   end
   set var, default if eval("#{var.to_s}.empty?")
 end
+
 namespace :puppet do
 
   desc "prep server - install ruby + rubygems + puppet + git and clone github repos"
@@ -20,13 +21,12 @@ namespace :puppet do
     options = ENV['options'] || ENV['OPTIONS']
     run "apt-get install -q -y ruby rubygems libshadow-ruby1.8 git-core libruby-extras"
     run "gem install puppet --no-rdoc --no-ri "
-    run "git clone git://github.com/aussielunix/puppet-standalone-demo.git /opt/"
+    run "git clone git://github.com/rds13/puppet-standalone-demo.git /opt/"
     run "cd /opt/ && git submodule init && git submodule update"
   end
 
   desc "update puppet repos from github"
   task :up, :hosts => host do
-    options = ENV['options'] || ENV['OPTIONS']
     run "cd /opt/ && git pull"
   end
 
@@ -38,8 +38,8 @@ namespace :puppet do
 
 end
 
-desc "deploy html site to linode - Params: HOST"
-task :deploy, :hosts => host do
-  prompt_with_default(:domain, "devops.lunix.com.au")
-  run "cd /opt/html/ && cp -a . /var/www/#{domain}/"
-end
+#desc "deploy html site to linode - Params: HOST"
+#task :deploy, :hosts => host do
+#  prompt_with_default(:domain, "devops.lunix.com.au")
+#  run "cd /opt/html/ && cp -a . /var/www/#{domain}/"
+#end
